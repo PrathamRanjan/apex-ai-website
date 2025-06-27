@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, LazyMotion, domAnimation } from "motion/react";
 import * as THREE from "three";
 import { MacbookScroll } from "./components/MacbookScroll";
 import { TextRevealCard, TextRevealCardTitle, TextRevealCardDescription } from "./components/TextRevealCard";
@@ -300,7 +300,8 @@ function App() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   
   return (
-    <div className="bg-white text-gray-900 overflow-x-hidden">
+    <LazyMotion features={domAnimation}>
+      <div className="bg-white text-gray-900 overflow-x-hidden">
       {/* Navigation - Standardized blue color scheme */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -806,6 +807,7 @@ function App() {
         </div>
       </footer>
     </div>
+    </LazyMotion>
   );
 }
 
