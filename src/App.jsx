@@ -538,7 +538,7 @@ function App() {
       </section>
 
       {/* MacBook Scroll Section */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white">
+      <section className="relative bg-gradient-to-b from-gray-50 to-white z-40">
         <MacbookScroll
           title={
             <span className="text-gray-900">
@@ -552,7 +552,7 @@ function App() {
       </section>
 
       {/* Services Section - Clean Aerospike style */}
-      <section className="relative py-24 bg-white" id="services">
+      <section className="relative py-24 bg-white z-10" id="services">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -602,7 +602,7 @@ function App() {
       </section>
 
       {/* Additional Services Grid */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gray-50 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -629,7 +629,7 @@ function App() {
       </section>
 
       {/* Elite Team Experience Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
